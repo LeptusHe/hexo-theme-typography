@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $backgroundColor: #ffffff !default;
 $foregroundColor: #2e405b !default;
 $fontList: "LXGW WenKai Screen", "Source Sans Pro", "Roboto", "Helvetica", "Helvetica Neue",
@@ -7,6 +9,11 @@ $titleFontList: "HiraMinProN-W6", "Source Han Serif CN", "Source Han Serif SC",
   "Source Han Serif TC", serif !default;
 $verticalPrimaryPaddingTopPatch: 0;
 $verticalSecondaryPaddingTopPatch: 1px;
+
+//$post-container-color: #131124;
+//$post-container-color: #101f30;
+$post-container-color: #1c2938;
+
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600");
 @import "animation";
 
@@ -351,7 +358,18 @@ footer * {
   margin: 0;
 }
 
+
 .post-container {
+  margin: 0 0 20px 0;
+  font-weight: normal;
+  padding: 25px;
+  background-color: lighten($post-container-color, 5%);
+  opacity: 1;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px 2px #161823;
+}
+
+.post-container-detail {
   margin: 0 0 20px 0;
   font-weight: normal;
 }
@@ -369,6 +387,7 @@ footer * {
 
 .post-abstract {
   font-size: 18px;
+  padding-top: 5px;
 }
 
 li {
@@ -485,7 +504,7 @@ figure {
     text-align: left;
     height: auto;
     margin: 0;
-    padding: 20px 30px;
+    padding: 20px 1px;
     overflow: auto;
   }
 
