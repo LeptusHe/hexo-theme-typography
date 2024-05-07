@@ -60,3 +60,22 @@ if theme.dove
                     br
                     i
                         small 评论一经采用，信函恕不退还，信鸽也不退还，请知悉。
+
+if theme.gitalk
+    div#gitalk-container
+
+    link(rel='stylesheet', href='https://unpkg.com/gitalk/dist/gitalk.css')
+    script(src='https://unpkg.com/gitalk/dist/gitalk.min.js')
+
+    script.
+        var gitalk = new Gitalk({
+            clientID: '#{theme.gitalk.clientID}',
+            clientSecret: '#{theme.gitalk.clientSecret}',
+            repo: '#{theme.gitalk.repo}',
+            owner: '#{theme.gitalk.githubID}',
+            admin: ['#{theme.gitalk.githubID}'],
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: '#{theme.gitalk.distractionFreeMode}'  // Facebook-like distraction free mode
+        })
+        gitalk.render('gitalk-container')
+

@@ -13,6 +13,13 @@ github: #username
 livere: # [data-uid] on livere.com
 disqus: # [short_name] on disqus.com
 dove: # For fun ONLY. Set to true to 'disable' comments on your site.
+#gitalk:
+#  clientID:
+#  clientSecret:
+#  repo:
+#  githubID:
+#  adminUser:
+#  distractionFreeMode: false
 
 # Set true to show the page indicator.
 showPageCount: true
